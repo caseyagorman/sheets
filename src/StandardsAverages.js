@@ -51,7 +51,7 @@ class StandardsAverages extends Component {
         <h1>Standards</h1>
         <br />
         {index.map(index => (
-          <div style={divStyle}>
+          <div key={index} style={divStyle}>
             <h4>{data[index]["Grade"]}</h4>
             <BarGraph data={data[index]} />
           </div>
