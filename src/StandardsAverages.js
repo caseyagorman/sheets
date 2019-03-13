@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Tabletop from "tabletop";
-import LineChart from "./LineChart";
+import BarGraph from "./BarGraph";
 
 class StandardsAverages extends Component {
   constructor() {
@@ -33,7 +33,7 @@ class StandardsAverages extends Component {
       margin: 1,
       textAlign: "center"
     };
-    // const index = [...Array(data.length).keys()];
+
     const chartData = [];
     for (let i = 0; i < data.length; i++) {
       let entry = data[i];
@@ -43,26 +43,19 @@ class StandardsAverages extends Component {
         }
       }
       chartData.push(data[i]);
-
-      //   chartData.push(Object.entries(data[i]));
     }
-    console.log(chartData);
 
+    const index = [...Array(data.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        {/* <h1>Standards</h1>
+        <h1>Standards</h1>
         <br />
         {index.map(index => (
           <div style={divStyle}>
-            <h4>{data[index]["Teacher"]}</h4>
-            <LineChart
-              teacher={data[index]["Teacher"]}
-              septemberBaseline={data[index]["september_baseline"]}
-              decemberGoal={data[index]["december_goal"]}
-              decemberActual={data[index]["december_actual"]}
-            />
+            <h4>{data[index]["Grade"]}</h4>
+            <BarGraph data={data[index]} />
           </div>
-        ))} */}
+        ))}
       </div>
     );
   }
