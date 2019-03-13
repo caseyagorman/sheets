@@ -52,6 +52,27 @@ class LineChart extends Component {
       labels: ["September", "December"],
       datasets: [
         {
+          label: "December Goal",
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: "white",
+          borderColor: "rgb(13, 135, 29)",
+          borderCapStyle: "butt",
+          borderDash: [10, 5],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: "rgb(13, 135, 29)",
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgb(13, 135, 29)",
+          pointHoverBorderColor: "rgb(13, 135, 29)",
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: dataSet1
+        },
+        {
           label: "December Actual",
           fill: false,
           lineTension: 0.1,
@@ -71,27 +92,6 @@ class LineChart extends Component {
           pointRadius: 1,
           pointHitRadius: 10,
           data: dataSet2
-        },
-        {
-          label: "December Goal",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: "white",
-          borderColor: "red",
-          borderCapStyle: "butt",
-          borderDash: [10, 5],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: "red",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "red",
-          pointHoverBorderColor: "red",
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: dataSet1
         }
       ]
     };

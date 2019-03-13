@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Tabletop from "tabletop";
 import LineChart from "./LineChart";
 
-class FandP extends Component {
+class StandardsAverages extends Component {
   constructor() {
     super();
     this.state = {
@@ -28,16 +28,29 @@ class FandP extends Component {
     const divStyle = {
       fontFamily: "Work Sans",
       display: "inline-block",
-      // marginTop: -300,
       height: 400,
       width: 500,
       margin: 1,
       textAlign: "center"
     };
-    const index = [...Array(data.length).keys()];
+    // const index = [...Array(data.length).keys()];
+    const chartData = [];
+    for (let i = 0; i < data.length; i++) {
+      let entry = data[i];
+      for (let prop in entry) {
+        if (entry[prop] === "") {
+          delete entry[prop];
+        }
+      }
+      chartData.push(data[i]);
+
+      //   chartData.push(Object.entries(data[i]));
+    }
+    console.log(chartData);
+
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        <h1>F&P</h1>
+        {/* <h1>Standards</h1>
         <br />
         {index.map(index => (
           <div style={divStyle}>
@@ -49,7 +62,7 @@ class FandP extends Component {
               decemberActual={data[index]["december_actual"]}
             />
           </div>
-        ))}
+        ))} */}
       </div>
     );
   }
@@ -58,4 +71,4 @@ class FandP extends Component {
   }
 }
 
-export default FandP;
+export default StandardsAverages;

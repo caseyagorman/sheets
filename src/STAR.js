@@ -33,7 +33,7 @@ class STAR extends Component {
       textAlign: "center"
     };
     return (
-      <div style={{ textAlign: "center", fontFamily: "lato" }}>
+      <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
         <h1>STAR</h1>
         <div>
           <Row>

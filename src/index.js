@@ -8,6 +8,7 @@ import ERD from "./ERD";
 import STAR from "./STAR";
 import Interim from "./Interim";
 import AppNav from "./AppNav";
+import StandardsAverages from "./StandardsAverages";
 import history from "./history";
 
 const AppRouter = () => (
@@ -48,6 +49,15 @@ const AppRouter = () => (
           <Interim
             {...props}
             link={"1r2bEdIquj0uwJyKI14cSbQ5ZIrste8iT51Z1M5hcejQ"}
+          />
+        )}
+      />
+      <Route
+        path="/standards"
+        render={props => (
+          <StandardsAverages
+            {...props}
+            link={"1op2U9Vo6wCz_klBiq6Iz-DZpIfDTGYQL4yz1DNCH-wE"}
           />
         )}
       />
