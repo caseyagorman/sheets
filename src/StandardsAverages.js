@@ -21,7 +21,6 @@ class StandardsAverages extends Component {
   }
 
   displayLineChart(data) {
-    console.log(data);
     if (!data || data[0] === undefined) {
       return <div />;
     }

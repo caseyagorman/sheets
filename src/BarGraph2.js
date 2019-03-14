@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
-class BarGraph extends Component {
-  getColor(xData) {
+class BarGraph2 extends Component {
+  getColor(data) {
     const colorDict = {
       CC: "purple",
       OA: "blue",
@@ -10,25 +10,13 @@ class BarGraph extends Component {
       MD: "orange",
       GA: "brown"
     };
-    const colorList = [];
-    for (let i = 0; i < xData.length; i++) {
-      colorList.push(colorDict[xData[i]]);
-    }
+    const color = colorDict[data];
 
-    return colorList;
+    return color;
   }
-
   displayChart(dataResults) {
     if (!dataResults) {
       return <div> </div>;
-    }
-    const yData = [];
-    const xData = [];
-    for (let d in dataResults) {
-      if (d !== "Grade") {
-        yData.push(dataResults[d]);
-        xData.push(d);
-      }
     }
 
     let options = {
@@ -65,7 +53,7 @@ class BarGraph extends Component {
           {
             ticks: {
               fontFamily: "Work Sans",
-              fontSize: 18,
+              fontSize: 12,
               fontColor: "black"
             }
           }
@@ -73,27 +61,26 @@ class BarGraph extends Component {
       }
     };
     const data = {
-      labels: xData,
+      labels: dataResults[1],
 
       datasets: [
         {
-          label: "Standards",
+          label: "percent mastery",
 
-          backgroundColor: this.getColor(xData),
-          borderColor: this.getColor(xData),
+          backgroundColor: this.getColor(dataResults[0]),
+
           borderWidth: 1,
-          hoverBackgroundColor: this.getColor(xData),
-          hoverBorderColor: this.getColor(xData),
-          data: yData
+
+          data: dataResults[2]
         }
       ]
     };
 
-    return <Bar height={200} width={400} data={data} options={options} />;
+    return <Bar height={500} width={800} data={data} options={options} />;
   }
   render() {
     return this.displayChart(this.props.data);
   }
 }
 
-export default BarGraph;
+export default BarGraph2;

@@ -9,6 +9,7 @@ import STAR from "./STAR";
 import Interim from "./Interim";
 import AppNav from "./AppNav";
 import StandardsAverages from "./StandardsAverages";
+import StandardsByTeacher from "./StandardsByTeacher";
 import history from "./history";
 
 const AppRouter = () => (
@@ -58,6 +59,15 @@ const AppRouter = () => (
           <StandardsAverages
             {...props}
             link={"1op2U9Vo6wCz_klBiq6Iz-DZpIfDTGYQL4yz1DNCH-wE"}
+          />
+        )}
+      />
+      <Route
+        path="/standardsbyteacher"
+        render={props => (
+          <StandardsByTeacher
+            {...props}
+            link={"1MS2j7Tg8u6G9yJnO75hkswFAdEwskbLsx44povTF7jI"}
           />
         )}
       />
