@@ -21,6 +21,59 @@ const AppNav = props => (
         />
       </div>
     </Navbar.Brand>
+
+    <Nav
+      style={{
+        textAlign: "center",
+        height: 48,
+        width: 100,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+        borderLeft: " .5px solid rgb(107, 39, 114, 0.7)",
+        color: "white"
+      }}
+    >
+      <Nav.Link
+        style={{
+          marginLeft: 20,
+          marginRight: 10,
+          color: "rgb(107, 39, 114)"
+        }}
+        href="/FandP"
+      >
+        F&P
+      </Nav.Link>
+    </Nav>
+    <Nav
+      style={{
+        textAlign: "center",
+        width: 100,
+        height: 48,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+
+        color: "white"
+      }}
+    >
+      <Nav.Link
+        style={{ marginRight: 10, color: "rgb(107, 39, 114)" }}
+        href="/STAR"
+      >
+        STAR
+      </Nav.Link>
+    </Nav>
+    <Nav
+      style={{
+        textAlign: "center",
+        width: 130,
+        height: 48,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+
+        color: "white"
+      }}
+    >
+      <Nav.Link style={{ color: "rgb(107, 39, 114)" }} href="/Interim">
+        Interim
+      </Nav.Link>
+    </Nav>
     <Nav
       style={{
         textAlign: "center",
@@ -42,58 +95,37 @@ const AppNav = props => (
       >
         ERD
       </Nav.Link>
-      <Nav
-        style={{
-          textAlign: "center",
-          height: 48,
-          width: 100,
-          borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
-          borderLeft: " .5px solid rgb(107, 39, 114, 0.7)",
-          color: "white"
-        }}
-      >
-        <Nav.Link
-          style={{
-            marginLeft: 20,
-            marginRight: 10,
-            color: "rgb(107, 39, 114)"
-          }}
-          href="/FandP"
-        >
-          F&P
-        </Nav.Link>
-      </Nav>
-      <Nav
-        style={{
-          textAlign: "center",
-          width: 100,
-          height: 48,
-          borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+    </Nav>
+    <Nav
+      style={{
+        textAlign: "center",
+        width: 250,
+        height: 48,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
-          color: "white"
-        }}
-      >
-        <Nav.Link
-          style={{ marginRight: 10, color: "rgb(107, 39, 114)" }}
-          href="/STAR"
-        >
-          STAR
-        </Nav.Link>
-      </Nav>
-      <Nav
-        style={{
-          textAlign: "center",
-          width: 130,
-          height: 48,
-          borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+        color: "white"
+      }}
+    >
+      <Nav.Link style={{ color: "rgb(107, 39, 114)" }} href="/Standards">
+        Standards by grade
+      </Nav.Link>
+    </Nav>
+    <Nav
+      style={{
+        textAlign: "center",
+        width: 250,
+        height: 48,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
-          color: "white"
-        }}
+        color: "white"
+      }}
+    >
+      <Nav.Link
+        style={{ color: "rgb(107, 39, 114)" }}
+        href="/Standardsbyteacher"
       >
-        <Nav.Link style={{ color: "rgb(107, 39, 114)" }} href="/Interim">
-          Interim
-        </Nav.Link>
-      </Nav>
+        Standards by teacher
+      </Nav.Link>
     </Nav>
   </Navbar>
 );
