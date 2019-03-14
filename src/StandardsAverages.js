@@ -20,7 +20,7 @@ class StandardsAverages extends Component {
     });
   }
 
-  displayLineChart(data) {
+  displayBarChart(data) {
     if (!data || data[0] === undefined) {
       return <div />;
     }
@@ -59,7 +59,7 @@ class StandardsAverages extends Component {
     );
   }
   render() {
-    return this.displayLineChart(this.state.data);
+    return this.displayBarChart(this.state.data);
   }
 }
 

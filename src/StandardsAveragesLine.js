@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Tabletop from "tabletop";
-import BarGraph2 from "./BarGraph2";
+import LineChart4 from "./LineChart4";
 
-class StandardsAverages extends Component {
+class StandardsAveragesLine extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,27 +19,40 @@ class StandardsAverages extends Component {
       simpleSheet: true
     });
   }
-  getTeachers(data) {
-    const CCTeachers = [];
+
+  displayLineChart(data) {
+    if (!data || data[0] === undefined) {
+      return <div />;
+    }
+    const divStyle = {
+      fontFamily: "Work Sans",
+      display: "inline-block",
+      height: 400,
+      width: 500,
+      margin: 1,
+      textAlign: "center"
+    };
+
+    const CCGrades = [];
     const CCScores = [];
     const OAScores = [];
-    const OATeachers = [];
-    const NBTTeachers = [];
+    const OAGrades = [];
+    const NBTGrades = [];
     const NBTScores = [];
-    const NFTeachers = [];
+    const NFGrades = [];
     const NFScores = [];
-    const MDTeachers = [];
+    const MDGrades = [];
     const MDScores = [];
-    const GATeachers = [];
+    const GAGrades = [];
     const GAScores = [];
     for (let i = 0; i < data.length; i++) {
       let entry = data[i];
-      CCTeachers.push(entry["Teacher"]);
-      OATeachers.push(entry["Teacher"]);
-      NBTTeachers.push(entry["Teacher"]);
-      NFTeachers.push(entry["Teacher"]);
-      MDTeachers.push(entry["Teacher"]);
-      GATeachers.push(entry["Teacher"]);
+      CCGrades.push(entry["Grade"]);
+      OAGrades.push(entry["Grade"]);
+      NBTGrades.push(entry["Grade"]);
+      NFGrades.push(entry["Grade"]);
+      MDGrades.push(entry["Grade"]);
+      GAGrades.push(entry["Grade"]);
 
       for (let prop in entry) {
         if (prop === "CC") {
@@ -57,40 +70,24 @@ class StandardsAverages extends Component {
         }
       }
     }
-    return [
-      ["CC", CCTeachers, CCScores],
-      ["OA", OATeachers, OAScores],
-      ["NBT", NBTTeachers, NBTScores],
-      ["MD", MDTeachers, MDScores],
-      ["NF", NFTeachers, NFScores],
-      ["GA", GATeachers, GAScores]
+    data = [
+      ["CC", CCGrades, CCScores],
+      ["OA", OAGrades, OAScores],
+      ["NBT", NBTGrades, NBTScores],
+      ["MD", MDGrades, MDScores],
+      ["NF", NFGrades, NFScores],
+      ["GA", GAGrades, GAScores]
     ];
-  }
-  displayLineChart(data) {
-    if (!data || data[0] === undefined) {
-      return <div />;
-    }
-    const teachers = this.getTeachers(data);
-    const divStyle = {
-      fontFamily: "Work Sans",
-      display: "inline-block",
-      height: 500,
-      width: 800,
-      margin: 50,
-      textAlign: "center"
-    };
 
-    const index = [...Array(teachers.length).keys()];
+    const index = [...Array(data.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
         <h1>Standards</h1>
         <br />
         {index.map(index => (
           <div key={index} style={divStyle}>
-            <b>
-              <h2>{teachers[index][0]}</h2>
-            </b>
-            <BarGraph2 data={teachers[index]} />
+            <h4>{data[index]["Grade"]}</h4>
+            <LineChart4 data={data[index]} />
           </div>
         ))}
       </div>
@@ -101,4 +98,4 @@ class StandardsAverages extends Component {
   }
 }
 
-export default StandardsAverages;
+export default StandardsAveragesLine;

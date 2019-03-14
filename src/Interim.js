@@ -22,7 +22,6 @@ class Interim extends Component {
   }
 
   displayLineChart(data) {
-    console.log("data", data);
     if (!data || data[0] === undefined) {
       return <div />;
     }

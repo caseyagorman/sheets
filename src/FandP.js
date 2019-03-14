@@ -21,14 +21,12 @@ class FandP extends Component {
   }
 
   displayLineChart(data) {
-    console.log(data);
     if (!data || data[0] === undefined) {
       return <div />;
     }
     const divStyle = {
       fontFamily: "Work Sans",
       display: "inline-block",
-      // marginTop: -300,
       height: 400,
       width: 500,
       margin: 1,
