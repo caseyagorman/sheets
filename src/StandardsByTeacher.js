@@ -83,7 +83,8 @@ class StandardsAverages extends Component {
     const index = [...Array(teachers.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        <h1>Standards</h1>
+        <br />
+        <h1 style={{ fontSize: 50 }}>Standards by Teacher</h1>
         <br />
         {index.map(index => (
           <div key={index} style={divStyle}>

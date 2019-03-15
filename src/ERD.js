@@ -35,7 +35,9 @@ class ERD extends Component {
     const index = [...Array(data.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        <h1>ERD</h1>
+        <br />
+        <h1 style={{ fontSize: 60 }}>ERD</h1>
+        <br />
         {index.map(index => (
           <div key={index} style={divStyle}>
             <h4>{data[index]["Teacher"]}</h4>

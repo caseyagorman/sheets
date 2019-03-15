@@ -2,6 +2,19 @@ import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
 class LineChart4 extends Component {
+  getColor(data) {
+    const colorDict = {
+      CC: "purple",
+      OA: "blue",
+      NBT: "green",
+      NF: "red",
+      MD: "orange",
+      GA: "brown"
+    };
+    const color = colorDict[data];
+
+    return color;
+  }
   displayChartData(dataResults) {
     if (!dataResults) {
       return <div />;
@@ -61,18 +74,18 @@ class LineChart4 extends Component {
           label: dataResults[0],
           fill: false,
           lineTension: 0.1,
-          backgroundColor: "blue",
-          borderColor: "blue",
+          backgroundColor: this.getColor(dataResults[0]),
+          borderColor: this.getColor(dataResults[0]),
           borderCapStyle: "butt",
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: "miter",
-          pointBorderColor: "blue",
+          pointBorderColor: this.getColor(dataResults[0]),
           pointBackgroundColor: "#fff",
           pointBorderWidth: 1,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: "blue",
-          pointHoverBorderColor: "blue",
+          pointHoverBackgroundColor: this.getColor(dataResults[0]),
+          pointHoverBorderColor: this.getColor(dataResults[0]),
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,

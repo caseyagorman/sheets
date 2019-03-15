@@ -35,7 +35,9 @@ class FandP extends Component {
     const index = [...Array(data.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        <h1>F&P</h1>
+        <br />
+        <h1 style={{ fontSize: 60 }}>F&P</h1>
+        <br />
         <br />
         {index.map(index => (
           <div style={divStyle}>

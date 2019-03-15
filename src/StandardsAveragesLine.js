@@ -82,11 +82,11 @@ class StandardsAveragesLine extends Component {
     const index = [...Array(data.length).keys()];
     return (
       <div style={{ textAlign: "center", fontFamily: "Work Sans" }}>
-        <h1>Standards</h1>
+        <br />
+        <h1 style={{ fontSize: 50 }}>Standards Over Time</h1>
         <br />
         {index.map(index => (
           <div key={index} style={divStyle}>
-            <h4>{data[index]["Grade"]}</h4>
             <LineChart4 data={data[index]} />
           </div>
         ))}

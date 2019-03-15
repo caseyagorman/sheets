@@ -4,7 +4,7 @@ import logo from "./static/logo.png";
 const AppNav = props => (
   <Navbar
     style={{
-      height: 26,
+      height: 56,
       fontSize: 24,
       fontFamily: "Work Sans",
       backgroundColor: "white",
@@ -13,7 +13,7 @@ const AppNav = props => (
     }}
   >
     <Navbar.Brand href="/">
-      <div style={{ height: 48 }}>
+      <div style={{ height: 55 }}>
         <img
           style={{ height: "100%", marginTop: -15, marginRight: -35 }}
           src={logo}
@@ -25,7 +25,7 @@ const AppNav = props => (
     <Nav
       style={{
         textAlign: "center",
-        height: 48,
+        height: 55,
         width: 100,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
         borderLeft: " .5px solid rgb(107, 39, 114, 0.7)",
@@ -34,8 +34,8 @@ const AppNav = props => (
     >
       <Nav.Link
         style={{
-          marginLeft: 20,
-          marginRight: 10,
+          marginLeft: 40,
+          marginRight: 20,
           color: "rgb(107, 39, 114)"
         }}
         href="/FandP"
@@ -47,14 +47,14 @@ const AppNav = props => (
       style={{
         textAlign: "center",
         width: 100,
-        height: 48,
+        height: 55,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
         color: "white"
       }}
     >
       <Nav.Link
-        style={{ marginRight: 10, color: "rgb(107, 39, 114)" }}
+        style={{ marginLeft: 10, marginRight: 10, color: "rgb(107, 39, 114)" }}
         href="/STAR"
       >
         STAR
@@ -64,7 +64,7 @@ const AppNav = props => (
       style={{
         textAlign: "center",
         width: 130,
-        height: 48,
+        height: 55,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
         color: "white"
@@ -77,7 +77,7 @@ const AppNav = props => (
     <Nav
       style={{
         textAlign: "center",
-        height: 48,
+        height: 55,
         marginLeft: 20,
         marginRight: 20,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)"
@@ -86,7 +86,7 @@ const AppNav = props => (
       <Nav.Link
         style={{
           marginTop: 10,
-          marginLeft: 20,
+          marginLeft: 2,
           marginRight: 20,
 
           color: "rgb(107, 39, 114)"
@@ -98,9 +98,11 @@ const AppNav = props => (
     </Nav>
     <Nav
       style={{
+        marginLeft: -20,
+        fontSize: 20,
         textAlign: "center",
-        width: 250,
-        height: 48,
+        width: 160,
+        height: 55,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
         color: "white"
@@ -112,9 +114,10 @@ const AppNav = props => (
     </Nav>
     <Nav
       style={{
+        fontSize: 20,
         textAlign: "center",
-        width: 250,
-        height: 48,
+        width: 160,
+        height: 55,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
 
         color: "white"
@@ -125,6 +128,23 @@ const AppNav = props => (
         href="/Standardsbyteacher"
       >
         Standards by teacher
+      </Nav.Link>
+    </Nav>
+    <Nav
+      style={{
+        fontSize: 20,
+        textAlign: "center",
+        width: 170,
+        height: 55,
+        borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
+        color: "white"
+      }}
+    >
+      <Nav.Link
+        style={{ color: "rgb(107, 39, 114)" }}
+        href="/Standards-averages"
+      >
+        Standards over time
       </Nav.Link>
     </Nav>
   </Navbar>
