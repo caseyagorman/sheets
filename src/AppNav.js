@@ -13,15 +13,15 @@ const AppNav = props => (
       borderBottom: " .5px solid rgb(107, 39, 114, 0.5)"
     }}
   >
-    {/* <Navbar.Brand href="/">
+    <Navbar.Brand href="/">
       <div style={{ height: 55 }}>
         <img
-          style={{ height: "100%", marginTop: -15, marginRight: -35 }}
+          style={{ height: 55, marginTop: -15, marginRight: -15 }}
           src={logo}
           alt="logo"
         />
       </div>
-    </Navbar.Brand> */}
+    </Navbar.Brand>
 
     <Nav
       style={{
