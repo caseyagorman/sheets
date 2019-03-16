@@ -11,7 +11,8 @@ class Home extends Component {
         <br />
         <br />
         <p style={{ fontSize: 24 }}>
-          Click the links above to view charts various assessments and standards
+          Click the links above to view charts of various assessments and
+          standards
         </p>
         <br />
         <img src={image} alt="Logo" />;
