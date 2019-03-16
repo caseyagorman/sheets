@@ -1,6 +1,7 @@
 import React from "react";
-import { Navbar, NavItem, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import logo from "./static/logo.png";
+import { Link } from "react-router-dom";
 const AppNav = props => (
   <Navbar
     style={{
@@ -12,7 +13,7 @@ const AppNav = props => (
       borderBottom: " .5px solid rgb(107, 39, 114, 0.5)"
     }}
   >
-    <Navbar.Brand href="/">
+    {/* <Navbar.Brand href="/">
       <div style={{ height: 55 }}>
         <img
           style={{ height: "100%", marginTop: -15, marginRight: -35 }}
@@ -20,7 +21,7 @@ const AppNav = props => (
           alt="logo"
         />
       </div>
-    </Navbar.Brand>
+    </Navbar.Brand> */}
 
     <Nav
       style={{
@@ -29,19 +30,12 @@ const AppNav = props => (
         width: 100,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)",
         borderLeft: " .5px solid rgb(107, 39, 114, 0.7)",
-        color: "white"
+        color: "rgb(107, 39, 114)"
       }}
     >
-      <Nav.Link
-        style={{
-          marginLeft: 40,
-          marginRight: 20,
-          color: "rgb(107, 39, 114)"
-        }}
-        href="/FandP"
-      >
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/FandP">
         F&P
-      </Nav.Link>
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -53,12 +47,9 @@ const AppNav = props => (
         color: "white"
       }}
     >
-      <Nav.Link
-        style={{ marginLeft: 10, marginRight: 10, color: "rgb(107, 39, 114)" }}
-        href="/STAR"
-      >
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/STAR">
         STAR
-      </Nav.Link>
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -70,9 +61,9 @@ const AppNav = props => (
         color: "white"
       }}
     >
-      <Nav.Link style={{ color: "rgb(107, 39, 114)" }} href="/Interim">
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/interim">
         Interim
-      </Nav.Link>
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -83,18 +74,9 @@ const AppNav = props => (
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)"
       }}
     >
-      <Nav.Link
-        style={{
-          marginTop: 10,
-          marginLeft: 2,
-          marginRight: 20,
-
-          color: "rgb(107, 39, 114)"
-        }}
-        href="/ERD"
-      >
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/ERD">
         ERD
-      </Nav.Link>
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -108,9 +90,9 @@ const AppNav = props => (
         color: "white"
       }}
     >
-      <Nav.Link style={{ color: "rgb(107, 39, 114)" }} href="/Standards">
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/standards">
         Standards by grade
-      </Nav.Link>
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -123,12 +105,9 @@ const AppNav = props => (
         color: "white"
       }}
     >
-      <Nav.Link
-        style={{ color: "rgb(107, 39, 114)" }}
-        href="/Standardsbyteacher"
-      >
-        Standards by teacher
-      </Nav.Link>
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/standardsbyteacher">
+        Standards by Teacher
+      </Link>
     </Nav>
     <Nav
       style={{
@@ -140,12 +119,9 @@ const AppNav = props => (
         color: "white"
       }}
     >
-      <Nav.Link
-        style={{ color: "rgb(107, 39, 114)" }}
-        href="/Standards-averages"
-      >
-        Standards over time
-      </Nav.Link>
+      <Link style={{ color: "rgb(107, 39, 114)" }} to="/standards-averages">
+        Standards Over Time
+      </Link>
     </Nav>
   </Navbar>
 );
