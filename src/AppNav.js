@@ -13,14 +13,16 @@ const AppNav = props => (
       borderBottom: " .5px solid rgb(107, 39, 114, 0.5)"
     }}
   >
-    <Navbar.Brand href="/">
-      <div style={{ height: 55 }}>
-        <img
-          style={{ height: 55, marginTop: -15, marginRight: -15 }}
-          src={logo}
-          alt="logo"
-        />
-      </div>
+    <Navbar.Brand>
+      <Link to="/">
+        <div style={{ height: 55 }}>
+          <img
+            style={{ height: 55, marginTop: -15, marginRight: -15 }}
+            src={logo}
+            alt="logo"
+          />
+        </div>
+      </Link>
     </Navbar.Brand>
 
     <Nav
@@ -68,9 +70,8 @@ const AppNav = props => (
     <Nav
       style={{
         textAlign: "center",
+        width: 110,
         height: 55,
-        marginLeft: 20,
-        marginRight: 20,
         borderRight: " .5px solid rgb(107, 39, 114, 0.7)"
       }}
     >
@@ -80,7 +81,6 @@ const AppNav = props => (
     </Nav>
     <Nav
       style={{
-        marginLeft: -20,
         fontSize: 20,
         textAlign: "center",
         width: 160,

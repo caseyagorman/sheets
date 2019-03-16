@@ -11,6 +11,7 @@ import AppNav from "./AppNav";
 import StandardsAverages from "./StandardsAverages";
 import StandardsAveragesLine from "./StandardsAveragesLine";
 import StandardsByTeacher from "./StandardsByTeacher";
+import Home from "./Home";
 import history from "./history";
 
 const AppRouter = () => (
@@ -26,6 +27,8 @@ const AppRouter = () => (
           />
         )}
       />
+
+      <Route path="//" component={Home} />
 
       <Route
         path="/ERD"
